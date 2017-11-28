@@ -2,6 +2,9 @@ import java.io.UnsupportedEncodingException;
 
 public class CipherXOR {
 
+    /*
+Метод для шифрування тексту. Може викидати помилки типу UnsupportedEncodingException
+     */
     public static byte[] xorЕncrypt(String text, byte[] keyWord) throws UnsupportedEncodingException {
         byte[] arr = text.getBytes("UTF-8");
 
@@ -11,7 +14,9 @@ public class CipherXOR {
         }
         return result;
     }
-
+/*
+Метод для дешифрування тексту
+ */
     public static String xorDecrypt(String text, byte[] keyWord) throws UnsupportedEncodingException {
         byte[] result = text.getBytes("UTF-8");
         byte[] keyarr = keyWord;

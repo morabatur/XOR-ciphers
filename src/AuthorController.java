@@ -11,7 +11,7 @@ public class AuthorController {
 
 
     public void initialize() {
-        File file = new File("img/fit.png");
+        File file = new File("img/fit.png");//Отримуємо файл по шляху
         Image image = new Image(file.toURI().toString());
         logoFIT.setImage(image);
 

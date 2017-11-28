@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+
 
 public class MainWindow extends Application {
 
@@ -13,18 +13,17 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-
-        Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
-        primaryStage.setTitle("XOR");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.setMinHeight(400);
+        Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));//Завантажуємо фрейм в пам'ять
+        primaryStage.setTitle("XOR");//задаємо назву вінка
+        primaryStage.setScene(new Scene(root, 600, 400));//сцена відкриється в заданому розмірі
+        primaryStage.setMinHeight(400);// задаються мінімальні параметри вікна
         primaryStage.setMinWidth(600);
-        primaryStage.show();
+        primaryStage.show();// відображення вікна
 
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch(args);//запуск основної програми
     }
 }
 
